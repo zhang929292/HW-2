@@ -16,7 +16,7 @@ class Solution {
 public:
   void final_vector(vector<int> vct);
   vector<int> RemDupli(vector<int> &input);
-  vector<int> RemDupliSet(vector<int> &input);
+  vector<int> RemDupliSet(vector<int> b);
   vector<int> ReversedVec(vector<int> &input);
   vector<int> RemoveOdd(vector<int> &input);
   vector<int> Concatenating(vector<int> &input1, vector<int> &input2);

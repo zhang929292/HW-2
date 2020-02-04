@@ -1,10 +1,12 @@
 #include "solution.h"
+#include <string>
 
+int Solution::ismap(string& a, string & b){
 
-void Solution::ismap(string& a, string & b){
-	if (a.length() != b.length())
+	if (a.length() != b.length()){
 		std::cout<< "{}"<<std::endl;
-	else {
+		return -1;
+	}else {
 		int charmap[256];
 		memset(charmap, -1, sizeof(charmap));
 		for (int i = 0; i < a.length(); i++){
@@ -12,7 +14,7 @@ void Solution::ismap(string& a, string & b){
 				charmap[a[i]] = b[i];
 			else if (charmap[a[i]] != b[i]){
 				std::cout<< "{}"<<std::endl;
-				return;
+				return -1;
 			}
 		}
 
@@ -29,6 +31,6 @@ void Solution::ismap(string& a, string & b){
 		std::cout << "}"<<std::endl;
 		
 	}
-	
+	return 0;
 }
 

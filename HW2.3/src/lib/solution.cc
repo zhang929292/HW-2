@@ -10,11 +10,44 @@ vector<int> Solution::RemDupli(vector<int> &input) {
 }
 
 
-vector<int> Solution::RemDupliSet(vector<int> &input){
-  set<int>st(input.begin(), input.end());
-  input.assign(st.begin(), st.end());
-  return input;
+vector<int> Solution::RemDupliSet(vector<int> b){
+    vector<int> a;
+    set<int> st;
+
+    for (int i = 0; i < b.size(); i++){
+        a.push_back(b[i]);
+        st.insert(b[i]);
+    }
+    // for (int i = 0; i < a.size(); i++)
+    //     cout << a[i] << " ";
+    // cout << endl;
+
+    // for (vector<int>::iterator it = a.begin(); it != a.end(); it++)
+    //     cout << *it << " ";
+    // cout << a.size() << endl;
+
+    vector<int> temp(b.begin(), b.end());
+
+    int idx = 0;
+    for (int i = 0; i < temp.size(); i++){
+        if (st.find(temp[i]) != st.end()) {
+            st.erase(temp[i]);
+            temp[idx++] = temp[i];
+        }
+    }
+    temp.erase(temp.begin()+idx, temp.end());
+
+    for (int i = 0; i < temp.size(); i++)
+        cout << temp[i] << " ";
+    cout << endl;
+
+    // for (set<int>::iterator it = st.begin(); it != st.end(); it++)
+    //     cout << *it << " ";
+    // cout << st.size() << endl;
+
+     return b;
 }
+
 
 
 void Solution::final_vector(vector<int> vct){

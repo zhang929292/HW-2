@@ -3,12 +3,10 @@
 
 
 TEST(HelloWorldShould, ReturnHelloWorld) {
-  string c;
   Solution solution;
   string a ="eegg";
   string b ="abb";
-  actual = solution.ismap(a, b);
-
-  std::string expected = "{}";
+  int actual = solution.ismap(a, b);
+  int expected = -1;
   EXPECT_EQ(expected, actual);
 }

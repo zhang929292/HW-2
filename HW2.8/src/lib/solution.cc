@@ -1,6 +1,6 @@
 #include "solution.h"
 
-void Solution::Final(std::vector<int> vct){
+void Solution::Final(std::vector<int> &vct){
 
 	std::sort(vct.begin(), vct.end());
 
@@ -16,5 +16,6 @@ void Solution::Final(std::vector<int> vct){
 	for (int i = 0; i < vct.size(); i++)
 		std::cout << vct[i] << " ";
 		std::cout << std::endl;
+
 }
 

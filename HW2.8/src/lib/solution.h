@@ -7,10 +7,11 @@
 #include <vector>
 #include <algorithm>
 #include <cstring>
+using std::vector;
 
 class Solution {
 public:
-  void Final(std::vector<int> vct);
+  void Final(std::vector<int> &vct);
 };
 
 #endif

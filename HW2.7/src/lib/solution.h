@@ -12,7 +12,7 @@ using std::string;
 
 class Solution {
 public:
-  void ismap(string& a, string & b);
+int ismap(string& a, string & b);
 };
 
 #endif
